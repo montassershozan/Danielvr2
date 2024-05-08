@@ -1,0 +1,58 @@
+.home-sec .content-homesec h1::after {
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    animation: typing 6s 1s infinite;
+  }
+  @keyframes typing {
+    0% {
+      content: "|";
+    }
+  
+    39% {
+      content: "Larry|";
+    }
+    40% {
+      content: "Larry Daniels|";
+    }
+    60% {
+      content: "|";
+    }
+    65% {
+      content: "Devel|";
+    }
+  
+    66% {
+      content: "Developer|";
+    }
+    75% {
+      content: "|";
+    }
+    80% {
+      content: "Desi|";
+    }
+  
+    81% {
+      content: "Designe|";
+    }
+  
+    92% {
+      content: "Designer|";
+    }
+  
+    100% {
+      content: "|";
+    }
+  }
+  .about-sec .contentsec2 .process11{
+    animation: moving 2.5s 1  ease-in-out;
+  }
+  @keyframes moving {
+
+    35%{
+      width: 35%;
+    }
+    80%{
+      width: 80%;
+    }
+  }

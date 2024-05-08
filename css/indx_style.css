@@ -1,0 +1,396 @@
+h4 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 333;
+}
+
+h4::after{
+  content: "";
+  width: 15%;
+  height: 0.5rem;
+  padding: 0.15rem;
+  background-color: transparent;
+  position: absolute;
+  left: 42.5%;
+  bottom: 8%;
+  z-index: -1;
+  border: 3px dashed var(--pargrph1-color);
+  border-left: none;
+  border-right: none;
+}
+
+:root {
+  --main-color: black;
+  --bg-layer: rgba(0, 0, 0, 0.65);
+  --bg-icons: rgba(0, 0, 0, 0.3);
+  --bg-whitee: white;
+  --sec-color: #1c1c1c;
+  --pargrph-color: rgb(116, 129, 130);
+  --pargrph1-color: rgba(116, 129, 130,0.2);
+  --icon-service: #f7f7f7;
+}
+/* home section */
+#home-sec {
+  background-image: url(../imgs/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.home-sec .bars{
+  display: none;
+  cursor: pointer;
+}
+.home-sec .bg-layer {
+  background-color: var(--bg-layer);
+}
+.home-sec .nvbar{
+  background-color: transparent;
+}
+.home-sec .nvlink {
+  position: relative;
+  color: white;
+  font-weight: 500;
+}
+
+.home-sec .nvlink::after {
+  content: "";
+  height: 0.1rem;
+  width: 0%;
+  background-color: var(--bg-whitee);
+  position: absolute;
+  transition: all 0.5s;
+}
+.home-sec .nvlink:hover::after {
+  width: 100%;
+}
+.home-sec .faico {
+  height: 1rem;
+  width: 1rem;
+  padding: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--bg-icons);
+  cursor: pointer;
+}
+body:not(:has(:target)) .Home-link::after,
+body:has(.home-sec:target) .Home-link::after,
+body:has(.about-sec:target) .About-link::after,
+body:has(.services-sec:target) .Services-link::after,
+body:has(.portfolio-sec:target) .Works-link::after,
+body:has(.Testimonials-sec:target) .Testimonials-sec::after,
+body:has(.Team-sec:target) .Team-link::after,
+body:has(.Contact:target) .Contact-link::after
+{
+  width: 100%;
+}
+/* about-section */
+.about-sec .contentsec2 .bou {
+  font-size: 2rem;
+}
+.about-sec .contentsec1 img{
+  width: 90%;
+  border: 3px dashed var(--icon-service);
+  border-top: none;
+  border-right: none;
+}
+.about-sec .contentsec2 .spabout {
+  color: var(--pargrph-color);
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+}
+.about-sec .contentsec2 .p-about {
+  color: var(--pargrph-color);
+}
+.about-sec .contentsec2 .process1 {
+  width: 100%;
+  height: 1.6rem;
+  background-color: #f6f6f6;
+  box-shadow: inset 1px 1px 8px #c0bcbc;
+  position: relative;
+  border-radius: 5px;
+}
+.about-sec .contentsec2 .process11 {
+  height: 1.6rem;
+  background-color: var(--sec-color);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.about-sec .contentsec2 .btn-cv {
+  background-color: var(--sec-color);
+  padding: 0.5rem 2rem;
+  color: var(--bg-whitee);
+  transition: all 0.5s;
+  border: 1px solid var(--sec-color);
+}
+.about-sec .contentsec2 .btn-cv:hover {
+  background-color: var(--bg-whitee);
+  color: var(--main-color);
+}
+.about-sec .contentsec2 .btn-contact {
+  background-color: var(--bg-whitee);
+  padding: 0.5rem 2rem;
+  color: var(--main-color);
+  border: 1px solid var(--sec-color);
+  transition: all 0.5s;
+}
+.about-sec .contentsec2 .btn-contact:hover {
+  background-color: var(--sec-color);
+  color: var(--bg-whitee);
+}
+
+/* services-section */
+
+.services-sec {
+  background-color: var(--icon-service);
+  margin-top: 6rem;
+  padding: 5rem 0;
+}
+.faic {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--icon-service);
+  padding: 1.2rem;
+  border-radius: 50%;
+}
+.services-sec .p-services {
+  font-size: 0.875rem;
+  color: var(--pargrph-color);
+}
+.overDv .faic {
+  transition: all 0.5s 0.1s;
+}
+.overDv:hover {
+  .faic {
+    background-color: var(--sec-color);
+    color: var(--bg-whitee);
+  }
+}
+/* portfolio-section */
+.portfolio-sec {
+  margin-top: 6rem;
+  padding: 5rem 0;
+}
+.portfolio-sec .pressport {
+  cursor: pointer;
+  position: relative;
+}
+.portfolio-sec .pressport::after {
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  position: absolute;
+  left: 0;
+  transition: all 0.4s;
+}
+.portfolio-sec .pressport:hover::after {
+  content: "";
+  width: 100%;
+  background-color: #1c1c1c;
+}
+.portfolio-sec .layyer .layer-white {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+.portfolio-sec .layyer:hover {
+  .layer-white {
+    background-color: rgba(255, 255, 255, 0.95);
+    top: 1.5%;
+    left: 1.5%;
+    right: 1.5%;
+    bottom: 1.5%;
+  }
+}
+.portfolio-sec .layyer .web-padd {
+  padding-top: 8rem;
+}
+.portfolio-sec .layyer .layer-white .ficon {
+  width: 0.9rem;
+  height: 0.9rem;
+  padding: 0.5rem;
+  background-color: var(--sec-color);
+  color: var(--bg-whitee);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid var(--sec-color);
+}
+.portfolio-sec .layyer .layer-white .ficon:hover {
+  background-color: var(--bg-whitee);
+  color: var(--main-color);
+}
+body:has(.all-sec:target) .all::after{
+width: 100%;
+}
+.portfolio-sec .layerOnScreen{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color:var(--bg-icons);
+  z-index:999999999999;
+}
+.portfolio-sec .closeIc,.rightIc,.leftIc{
+  cursor: grab;
+}
+/* Testimonials-section */
+.Testimonials-sec{
+  background-color: var(--icon-service);
+  padding: 5rem 0;
+}
+.Testimonials-sec .widdthImg{
+  width: 15%;
+}
+.Testimonials-sec .btn-cir{
+  width: 0.3rem;
+  height: 0.3rem;
+  padding: 0.3rem;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+}
+/* counter-section */
+.counter-sec{
+  margin-top: 2rem;
+  padding: 5rem 0;
+  color: #343434;
+}
+.counter-sec h5{
+  color: #748182;
+}
+/* team-section */
+.Team-sec {
+  background-color: var(--icon-service);
+  padding: 5rem 0;
+}
+.Team-sec .bg-pj{
+  padding: 1rem;
+background-color: #5B5B5B;
+}
+.Team-sec .layyyyer{
+  position: relative;
+}
+.Team-sec .layeronphoto{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-whitee);
+  transition: all 0.5s;
+  overflow: hidden;
+
+}
+.Team-sec .layyyyer:hover{
+  .layeronphoto{
+    transform: rotateY(360deg) scale(1,1) ;
+    top: 1.5%;
+    left:1.5%;
+    right:1.5%;
+    bottom: 1.5%;
+    background-color: var(--bg-whitee);
+  }
+}
+
+.Team-sec .layyyyer .layeronphoto  .faic1{
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--sec-color);
+  padding: 0.9rem;
+  color: white;
+  border: 1px solid var(--sec-color);
+  border-radius: 40px;
+}
+.Team-sec .layyyyer .layeronphoto  .faic1:hover{
+  background-color: var(--bg-whitee);
+  color: black;
+cursor: pointer;
+}
+/* contactus-section */
+
+.Contact h3 ,h6{
+  font-family: 'Montserrat', sans-serif;
+}
+.Contact p{
+  font-family: 'Poppins', sans-serif;
+  color:#748182;
+}
+.bg-Contact .Contact-content h3::after{
+  content: "";
+  position: absolute;
+  height: 0.375rem;
+  width:14rem;
+  top:3rem;
+  left: 28rem;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 0;
+  color: #E5E5E5;
+  border-style: dotted;
+  border-spacing:5px;
+  border-radius: 6%;
+}
+.bg-Contact{
+  padding:1.7rem;
+}
+.Contact  .fa{
+  border-radius: 50%;
+  padding: 1.25rem 1.4375rem;
+  transition: 1s;
+  background-color: rgba(0, 0, 0, 0.065);
+}
+.Address{
+transition: 0.1s;
+}
+.Email{
+  transition: 0.1s;
+}
+.Phone{
+  transition: 0.1s;
+}
+.Address:hover {
+  .fa{
+  background-color: #18191a;
+  color: white;}
+}
+.Email:hover {
+  .fa{
+  background-color: #18191a;
+  color: white;}
+}
+.Phone:hover {
+  .fa{
+  background-color: #18191a;
+  color: white;}
+}
+.form-ccontrol{
+      display: block;
+      width: 100%;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--bs-body-color);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: #F4F4F4;
+      background-clip: padding-box;
+      border: var(--bs-border-width) solid #F4F4F4;
+      border-radius: var(--bs-border-radius);
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/* footer-section */
+
+.bg-footer{
+  color:#748182;
+  background-color: #1C1C1C;
+}
